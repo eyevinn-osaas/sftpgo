@@ -64,4 +64,5 @@ RUN chown -R sftpgo:sftpgo /etc/sftpgo /srv/sftpgo && chown sftpgo:sftpgo /var/l
 WORKDIR /var/lib/sftpgo
 USER 1000:1000
 
+ENV SFTPGO__HTTPD__TOKEN_VALIDATION=1
 CMD ["sftpgo", "serve"]
